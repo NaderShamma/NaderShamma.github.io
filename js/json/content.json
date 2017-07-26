@@ -1,0 +1,24 @@
+{
+  "content":[
+    {
+      "page":"home",
+      "title":"Research: Utilising Mobile Health and Smart Technology to Aid with the Treatment and Management of Inflammatory Bowel Disease (IBD)",
+      "url":"../../content/home.html"
+    },
+    {
+      "page":"about",
+      "title":"About me",
+      "url":"../../content/about.html"
+    },
+    {
+      "page":"pubs",
+      "title":"Publications",
+      "url":"../../content/pubs.html"
+    },
+    {
+      "page":"slides",
+      "title":"Presentations",
+      "url":"../../content/slides.html"
+    }
+  ]
+}

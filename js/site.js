@@ -1,30 +1,25 @@
 function getContent(input){
     var output;
-
-    return
+    var data = $.getJSON(input);
+    console.lof(data);
 }
 
 function parseContent(){
-  var files = [
-                {name: "home", url:"../content/home.json"},
-                {name: "about", url:"../content/about.json"},
-                {name: "pubs", url:"../content/pubs.json"},
-                {name: "slides", url:"../content/slides.json"}
-              ];
   var content;
-
 
 }
 
-function menu(){
-  var menu = $('.menu li > a');
+function navigation(){
+  var links = $('.menu li > a');
   console.log(menu);
 }
 
 function main(){
+  var contentMetaData = getContent("json/content.json");
+
   $('.collapsible').collapsible();
   $(".button-collapse").sideNav();
-  menu();
+  navigation();
 }
 
 $(document).ready(main());

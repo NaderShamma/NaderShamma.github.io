@@ -12,7 +12,7 @@ function parseContent(){
 
 function navigation(){
   var links = $('.menu li > a');
-  console.log(menu);
+  console.log(links);
 }
 
 function main(){

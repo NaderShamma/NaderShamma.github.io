@@ -24,6 +24,7 @@ function navigation(p){
     console.log(pages.length);
     for(var i = 0; i < pages.length; i ++)
     {
+      console.log(pages[i].page);
       if(pages[i].page == page){
         renderPage(pages[i]);
         break;

@@ -8,13 +8,18 @@ function renderPage(page){
 
   $.get(contentURL, function(data){
       contentBody.html(data);
-  })  
+  })
 }
 
 function navigation(p){
   var pages = p;
-
   var links = $('.menu li > a');
+  links.click(function(){
+    console.log($(this);
+    var link = $(this);
+    console.log(link);
+  })
+
   console.log(links);
 }
 
@@ -33,6 +38,7 @@ function materialize(data){
   console.log(data.content.length);
 
   init(data.content);
+  navigation(data.content);
 
   $('.collapsible').collapsible();
 }

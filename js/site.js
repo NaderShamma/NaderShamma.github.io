@@ -1,14 +1,8 @@
 function getPages(input){
-    var output = $.getJSON(input, function(data, status){
-      console.log(status);
-      console.log(data);
-      if(status === 200 ){
-        return data;
-      }
-      else{
-        return null;
-      }
-    });
+    var output;
+    var meta = $.getJSON(input);
+    console.log(meta);
+    output = $.parseJSON(meta);
     console.log(output);
     return output;
 }

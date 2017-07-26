@@ -3,11 +3,11 @@ function getPages(input){
     var output;
     var meta = $.getJSON(input);
     console.log(meta);
-    output = meta.done(function(data){
+    meta.done(function(data, output){
       console.log(data);
-      return data;
+      output = data;
     }).fail(function(){
-      return null;
+      output = null;
     });
     console.log(output);
     console.log("AJAX complete");

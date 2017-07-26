@@ -37,13 +37,14 @@ function init(p){
       break;
     }
   }
+  $('.collapsible').collapsible();
 }
 
 function materialize(data){
   init(data.content);
   navigation(data.content);
 
-  $('.collapsible').collapsible();
+
 }
 
 function main(){

@@ -15,7 +15,7 @@ function navigation(p){
   var pages = p;
   var links = $('.menu li > a');
   links.click(function(){
-    console.log($(this);
+    console.log($(this));
     var link = $(this);
     console.log(link);
   })

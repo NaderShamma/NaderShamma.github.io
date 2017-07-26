@@ -20,6 +20,7 @@ function navigation(p){
     var link = $(this);
     console.log(link);
     page = link.attr("data-content");
+    console.log(page);
     for(var i = 0; i < pages.length; i ++)
     {
       if(pages[i].page == page){

@@ -1,5 +1,6 @@
 
 function renderPage(page){
+  console.log("render page called");
   var pageTitle = $('#page-title');
   var contentBody = $('#main-content');
   var contentTitle = page.title;
@@ -7,6 +8,7 @@ function renderPage(page){
   pageTitle.html(page.title);
 
   $.get(contentURL, function(data){
+      console.log(data);
       contentBody.html(data);
   })
 }

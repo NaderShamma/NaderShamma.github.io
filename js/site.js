@@ -21,6 +21,7 @@ function navigation(p){
     console.log(link);
     page = link.attr("data-content");
     console.log(page);
+    console.log(pages.length);
     for(var i = 0; i < pages.length; i ++)
     {
       if(pages[i].page == page){

@@ -3,42 +3,53 @@
   <head>
     <title> Research: IBD Support System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
+    <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
   </head>
   <body>
+    <nav class="nav-extended purple darken-3">
+      <section class="nav-content">
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a href="#research">Take Part</a></li>
+          <li class="tab"><a class="active" href="#about">About me</a></li>
+          <li class="tab disabled"><a href="#publications">Publications</a></li>
+          <li class="tab"><a href="#Presentations">Presentations</a></li>
+        </ul>
+      </section>
+    </nav>
+
     <section class="container">
+      <!-- Page Header -->
       <header class="row">
-        <section class=".col-md-12">
-          <section class="page-header">
+        <section class="col s12">
+          <section class="section">
             <h1>Research: Intelligent Systems and IBD <h1>
             <h2>Development of a smart mobile application to support IBD patients with the self-management of the disease.</h2>
           </section>
-          <section class="col-md-12">
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-            </ul>
-          </section>
+          <section class="devider"></section>
         </section>
       </header>
-      <article class="row">
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="home">...</div>
-          <div role="tabpanel" class="tab-pane" id="profile">...</div>
-          <div role="tabpanel" class="tab-pane" id="messages">...</div>
-          <div role="tabpanel" class="tab-pane" id="settings">...</div>
-        </div>
-      </article>
+
+      <!-- Page banner-->
+      <section class="row yellow lighten-3">
+        <section class="col s12">
+          <h3 class="white">How you will be helping:</h3>
+          <p class="white">
+            By filling out this survey you will help us get a much better understanding of who IBD patients are, what challenges they face and how we can help. Furthermore we hope to use this information in addition to information gathered from other studies to develop a virtual patient to simulate someone with IBD so that we may fully test any application that is being built.
+          </p>
+          <p>
+            <a class="waves-effect waves-light btn-large" href="#">Take Part <i class="material-icons">create</i></a>
+          </p>
+        </section>
+      </section>
+
+      <!-- Page content-->
     </section>
   </body>
 </html>

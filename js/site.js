@@ -1,13 +1,13 @@
 
-function renderPage(page){
-  var pageTitle = $('#page-title');
-  var contentBody = $('#main-content');
-  var contentTitle = page.title;
-  var contentURL = page.url;
-  pageTitle.html(page.title);
+function renderPage(p){
+  var page = p;
 
-  $.get(contentURL, function(data){
-      contentBody.html(data);
+  //set the page title
+  $('#page-title').html(page.title);
+
+  //render page content
+  $.get(page.url, function(data){
+      $('#main-content').html(data);
       $('.collapsible').collapsible();
   })
 }
@@ -17,9 +17,12 @@ function navigation(p){
   var links = $('.menu li > a');
   var page;
 
+  //bind .click() to all menu links
   links.click(function(){
     var link = $(this);
     page = link.attr("data-content");
+
+    //search for page maching link data-content tag
     for(var i = 0; i < pages.length; i ++)
     {
       if(pages[i].page == page){
@@ -30,6 +33,7 @@ function navigation(p){
   })
 }
 
+//load first page on entry
 function init(p){
   var pages = p;
   for (var i = 0; i < pages.length; i++ ){
@@ -43,13 +47,13 @@ function init(p){
 function materialize(data){
   init(data.content);
   navigation(data.content);
-
-
 }
 
 function main(){
-  var pageData = "js/json/content.json";
-  var pages = $.getJSON(pageData);
+  //get JOSN object
+  var pages = $.getJSON("js/json/content.json");
+
+  //initialise data and page
   pages.done(
     materialize
   ).fail(
@@ -57,6 +61,7 @@ function main(){
       console.log("failed");
     }
   );
+
   $(".button-collapse").sideNav();
 }
 

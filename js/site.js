@@ -2,6 +2,7 @@ function getPages(input){
     var output;
     var meta = $.getJSON(input, function(data, status){
       console.log(status);
+      console.log(data);
       if(status === 200 ){
         output = data;
       }
@@ -28,7 +29,7 @@ function navigation(p){
 
 function init(p){
   var pages = p;
-  console.log(pages.content.length);
+  console.log(pages);
   console.log("init triggered");
 }
 

@@ -25,22 +25,24 @@
       font-size: 1em;
     }
     </style>
+
+    <script>
+    $(document).ready(function(){
+      $('.collapsible').collapsible();
+    });
+    </script>
+
   </head>
   <body>
+
     <nav class="nav-extended purple darken-3">
       <section class="container">
-        <section class="row">
-          <section class="col s12">
-            <section class="nav-content">
-              <ul class="tabs tabs-transparent">
-                <li class="tab"><a class="active" href="#research">Take Part</a></li>
-                <li class="tab"><a  href="#about">About me</a></li>
-                <li class="tab disabled"><a href="#publications">Publications</a></li>
-                <li class="tab"><a href="#Presentations">Presentations</a></li>
-              </ul>
-            </section>
-          </section>
-        </section>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="index.html">Take Part</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="pubs.html">Publications</a></li>
+          <li><a href="present.html">Presentations</a></li>
+        </ul>
       </section>
     </nav>
 
@@ -57,7 +59,8 @@
   </section>
 
   <!--Page content -->
-  <section id="research" class="container">
+  <sectionclass="container">
+
     <section class="row">
         <h2>How you will be helping:</h2>
         <p>
@@ -122,7 +125,7 @@
         </li>
 
         <li>
-          <div class="collapsible-header"><h2>Can I withdraw my entry?</h2></div>
+          <div class="collapsible-header"><h3>Can I withdraw my entry?</h2></div>
           <div class="collapsible-body">
             <p>
               Yes. Even though you are answering this survey anonymously we will ask two special questions which you can use to identify yourself if you wish to withdraw (see section 3). These questions include "Enter the name of a memorable childhood movie." and "Enter the name of a memorable city, town or place." If you wish to withdraw simply email us via nader.al-shamma022015[at]my.ntu.ac.uk with the answer to those two questions and you will be removed from the survey results. Please note you must state that you wish to withdraw before 14th August 2017 to ensure you information can be removed before work is submitted.
@@ -138,16 +141,6 @@
         </li>
       </ul>
     </section>
-
-    <section id="about" class="container">
-    </section>
-
-    <section id="presentation" class="container">
-    </section>
-
-    <section id="publications" class="container">
-    </section>
-
 
   </body>
 </html>

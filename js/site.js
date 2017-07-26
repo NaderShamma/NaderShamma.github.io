@@ -1,7 +1,8 @@
 function getContent(input){
     var output;
     var data = $.getJSON(input);
-    console.lof(data);
+    console.log(data);
+    return data;
 }
 
 function parseContent(){

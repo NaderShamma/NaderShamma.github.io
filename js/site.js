@@ -49,7 +49,6 @@ function materialize(data){
 function main(){
   var pageData = "js/json/content.json";
   var pages = $.getJSON(pageData);
-  console.log(pages);
   pages.done(
     materialize
   ).fail(

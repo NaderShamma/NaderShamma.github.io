@@ -14,6 +14,8 @@ function navigation(p){
 
 function init(data){
   console.log(data);
+  console.log(data.content);
+  console.log(data.content.length);
   $('.collapsible').collapsible();
 }
 
@@ -22,14 +24,12 @@ function main(){
   var pageData = "js/json/content.json";
   var pages = $.getJSON(pageData);
   console.log(pages);
-  pages.done(
-    init
+  pages.done(init
   ).fail(
     function(){
       console.log("failed");
     }
   );
-
   $(".button-collapse").sideNav();
 }
 

@@ -8,6 +8,7 @@ function renderPage(page){
 
   $.get(contentURL, function(data){
       contentBody.html(data);
+      $('.collapsible').collapsible();
   })
 }
 
@@ -37,7 +38,6 @@ function init(p){
       break;
     }
   }
-  $('.collapsible').collapsible();
 }
 
 function materialize(data){

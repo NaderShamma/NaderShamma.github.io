@@ -2,7 +2,10 @@ function getPages(input){
     var output;
     var meta = $.getJSON(input);
     console.log(meta);
-    output = $.parseJSON(meta);
+    output = meta.done(function(json){
+      console.log("json out line 6: " + json);
+      return json;
+    });
     console.log(output);
     return output;
 }

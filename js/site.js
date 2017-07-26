@@ -1,8 +1,11 @@
 function getContent(input){
     var output;
-    var data = $.getJSON(input);
-    console.log(data);
-    return data;
+    var meta = $.getJSON(input, function(data, status){
+      console.log(status);
+      console.log(data);
+    });
+    console.log(meta);
+    return meta;
 }
 
 function parseContent(){

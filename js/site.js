@@ -12,7 +12,7 @@ function navigation(p){
 }
 
 
-function init(pages){
+function init(data){
   console.log(pages);
   $('.collapsible').collapsible();
 }
@@ -23,7 +23,7 @@ function main(){
   var pages = $.getJSON(pageData);
   console.log(pages);
   pages.done(
-    init(data)
+    init
   ).fail(
     function(){
       console.log("failed");

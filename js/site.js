@@ -3,10 +3,10 @@ function getPages(input){
       console.log(status);
       console.log(data);
       if(status === 200 ){
-        return = data;
+        return data;
       }
       else{
-        return = null;
+        return null;
       }
     });
     console.log(output);

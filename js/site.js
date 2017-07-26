@@ -1,18 +1,3 @@
-function getPages(input){
-    console.log("Ajax started");
-    var output;
-    var meta = $.getJSON(input);
-    console.log(meta);
-    meta.done(function(data, output){
-      console.log(data);
-      output = data;
-    }).fail(function(){
-      output = null;
-    });
-    console.log(output);
-    console.log("AJAX complete");
-    return output;
-}
 
 function parseContent(page){
   var content;
@@ -26,21 +11,25 @@ function navigation(p){
   console.log(links);
 }
 
-function init(p){
-  var pages = p;
-  console.log("init triggered");
+
+function init(pages){
   console.log(pages);
-  console.log(pages.content);
+  $('.collapsible').collapsible();
 }
 
 function main(){
   console.log("main started");
-  var pages = getPages("js/json/content.json");
+  var pageData = "js/json/content.json";
+  var pages = $.getJSON(pageData);
+  console.log(pages);
+  pages.done(
+    init(data)
+  ).fail(
+    function(){
+      console.log("failed");
+    }
+  );
 
-  init(pages);
-  navigation(pages);
-
-  $('.collapsible').collapsible();
   $(".button-collapse").sideNav();
 }
 

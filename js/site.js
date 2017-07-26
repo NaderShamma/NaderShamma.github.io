@@ -28,7 +28,7 @@ function navigation(p){
 
 function init(p){
   var pages = p;
-  console.log(pages.content);
+  console.log(pages.content.length);
   console.log("init triggered");
 }
 

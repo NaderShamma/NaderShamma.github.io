@@ -1,6 +1,5 @@
 
 function renderPage(page){
-  console.log("render page called");
   var pageTitle = $('#page-title');
   var contentBody = $('#main-content');
   var contentTitle = page.title;
@@ -8,7 +7,6 @@ function renderPage(page){
   pageTitle.html(page.title);
 
   $.get(contentURL, function(data){
-      console.log(data);
       contentBody.html(data);
   })
 }
@@ -20,21 +18,15 @@ function navigation(p){
 
   links.click(function(){
     var link = $(this);
-    console.log(link);
     page = link.attr("data-content");
-    console.log(page);
-    console.log(pages.length);
     for(var i = 0; i < pages.length; i ++)
     {
-      console.log(pages[i].page);
       if(pages[i].page == page){
         renderPage(pages[i]);
         break;
       }
     }
   })
-
-  console.log(links);
 }
 
 function init(p){
@@ -48,10 +40,6 @@ function init(p){
 }
 
 function materialize(data){
-  console.log(data);
-  console.log(data.content);
-  console.log(data.content.length);
-
   init(data.content);
   navigation(data.content);
 
@@ -59,7 +47,6 @@ function materialize(data){
 }
 
 function main(){
-  console.log("main started");
   var pageData = "js/json/content.json";
   var pages = $.getJSON(pageData);
   console.log(pages);

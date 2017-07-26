@@ -14,10 +14,19 @@ function renderPage(page){
 function navigation(p){
   var pages = p;
   var links = $('.menu li > a');
+  var page;
+
   links.click(function(){
-    console.log($(this));
     var link = $(this);
     console.log(link);
+    page = link.attr("data-content");
+    for(var i = 0; i < pages.length; i ++)
+    {
+      if(pages[i].page == page){
+        renderPage(pages[i]);
+        break;
+      }
+    }
   })
 
   console.log(links);
@@ -28,6 +37,7 @@ function init(p){
   for (var i = 0; i < pages.length; i++ ){
     if(pages[i].page == "home"){
       renderPage(pages[i]);
+      break;
     }
   }
 }

@@ -1,29 +1,45 @@
-function getContent(input){
+function getPages(input){
     var output;
     var meta = $.getJSON(input, function(data, status){
       console.log(status);
-      console.log(data);
+      if(status === 200 ){
+        output = data;
+      }
+      else{
+        output = null;
+      }
     });
     console.log(meta);
-    return meta;
+    console.log(output);
+    return output;
 }
 
-function parseContent(){
+function parseContent(page){
   var content;
 
 }
 
-function navigation(){
+function navigation(p){
+  var pages = p;
+
   var links = $('.menu li > a');
   console.log(links);
 }
 
+function init(p){
+  var pages = p;
+  console.log(pages.content);
+  console.log("init triggered");
+}
+
 function main(){
-  var contentMetaData = getContent("js/json/content.json");
+  var pages = getPages("js/json/content.json");
+  init(pages);
 
   $('.collapsible').collapsible();
   $(".button-collapse").sideNav();
-  navigation();
+
+  navigation(pages);
 }
 
 $(document).ready(main());

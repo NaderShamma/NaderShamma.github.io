@@ -16,7 +16,7 @@ function navigation(){
 }
 
 function main(){
-  var contentMetaData = getContent("./json/content.json");
+  var contentMetaData = getContent("/json/content.json");
 
   $('.collapsible').collapsible();
   $(".button-collapse").sideNav();

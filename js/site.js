@@ -13,7 +13,7 @@ function navigation(p){
 
 
 function init(data){
-  console.log(pages);
+  console.log(data);
   $('.collapsible').collapsible();
 }
 

@@ -6,46 +6,32 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
-    <style>
-    h1, h2, h3, h4, h5, h6, p, a, span{
-      font-family: 'Roboto Mono', monospace;
-    }
-    h1{
-      font-size: 2em;
-    }
-    h2{
-      font-size: 1.75em;
-    }
 
-    h3{
-      font-size: 1.5em;
-    }
-
-    h4{
-      font-size: 1.25em;
-    }
-
-    p{
-      font-size: 1em;
-    }
-    </style>
   </head>
   <body>
 
     <nav class="purple darken-4">
       <section class="nav-wrapper">
       <section class="container">
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="index.html">Take Part</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="pubs.html">Publications</a></li>
-          <li><a href="present.html">Presentations</a></li>
+        <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down menu">
+          <li><a href="#" data-content="home">Take Part</a></li>
+          <li><a href="#" data-content="about">About Me</a></li>
+          <li><a href="#" data-content="pubs">Publications</a></li>
+          <li><a href="#" data-content="slides">Presentations</a></li>
+        </ul>
+        <ul class="side-nav menu" id="mobile-menu">
+          <li><a href="#" data-content="home">Take Part</a></li>
+          <li><a href="#" data-content="about">About Me</a></li>
+          <li><a href="#" data-content="pubs">Publications</a></li>
+          <li><a href="#" data-content="slides">Presentations</a></li>
         </ul>
       </section>
       </section>
@@ -147,11 +133,6 @@
       </ul>
     </section>
 
-
-    <script>
-      $(document).ready(function(){
-        $('.collapsible').collapsible();
-      });
-    </script>
+    <script src="js/site.js"></script>
   </body>
 </html>

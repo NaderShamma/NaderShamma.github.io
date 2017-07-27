@@ -13,7 +13,7 @@ function renderPage(page){
 // set up menu
 function menuOverride(pages){
     var i = 0;
-
+    console.log($('.menu li > a'));
     while (i < $('.menu li > a').length && i < pages.length) {
       $('.menu li > a')[i].attr("href", pages[i].page);
       i++;

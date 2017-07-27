@@ -57,7 +57,7 @@ function materialize(data){
 function main(){
   //get and process JSON data
   $.getJSON("js/json/content.json").done(
-    materialize(data);
+    materialize;
   ).fail(
     function(){
       console.log("failed");

@@ -1,7 +1,5 @@
 
-function renderPage(p){
-  var page = p;
-
+function renderPage(page){
   //set the page title
   $('#page-title').html(page.title);
 
@@ -12,30 +10,24 @@ function renderPage(p){
   })
 }
 
-function navigation(p){
-  var pages = p;
-  var links = $('.menu li > a');
-  var page;
+function navigation(pages){
+    //bind .click() to all menu links
+  $('.menu li > a').click(function(){
 
-  //bind .click() to all menu links
-  links.click(function(){
-    var link = $(this);
-    page = link.attr("data-content");
-
-    //search for page maching link data-content tag
+      //search for page maching link data-content tag
     for(var i = 0; i < pages.length; i ++)
     {
-      if(pages[i].page == page){
+      if(pages[i].page == $(this).attr("data-content")){
         renderPage(pages[i]);
         break;
       }
     }
-  })
+
+  });
 }
 
 //load first page on entry
-function init(p){
-  var pages = p;
+function init(pages){
   for (var i = 0; i < pages.length; i++ ){
     if(pages[i].page == "home"){
       renderPage(pages[i]);
@@ -50,11 +42,8 @@ function materialize(data){
 }
 
 function main(){
-  //get JOSN object
-  var pages = $.getJSON("js/json/content.json");
-
-  //initialise data and page
-  pages.done(
+  //get and process JSON data
+  $.getJSON("js/json/content.json").done(
     materialize
   ).fail(
     function(){

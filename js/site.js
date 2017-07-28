@@ -14,7 +14,9 @@ function renderPage(page){
 function menuOverride(pages){
     var i = 0;
     console.log($('.menu li > a'));
+    console.log(pages);
     $.each($('.menu li > a'), function(i, val){
+        console.log(pages);
         $(this).attr("href", pages[i].page);
         if(i < pages.length){
           i ++;
@@ -24,10 +26,6 @@ function menuOverride(pages){
         }
     });
 
-    // while (i < $('.menu li > a').length && i < pages.length) {
-    //   $('.menu li > a')->[i].attr("href", pages[i].page);
-    //   i++;
-    // }
     i = 0;
 }
 

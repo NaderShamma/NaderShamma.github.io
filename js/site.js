@@ -14,13 +14,8 @@ function renderPage(page){
 function menuOverride(pages){
     var j = 0;
     $.each($('.menu li > a'), function(i, val){
-
-        console.log(j);
-
         if(j == pages.length){ j = 0;}
-        console.log(j);
-        console.log(pages[j].page);
-        $(this).attr("href", pages[j].page);
+        $(this).attr("href", "#"+pages[j].page);
         j++;
     });
 }
@@ -67,7 +62,7 @@ function main(){
     }
   );
 
-  $(".button-collapse").sideNav();
+  $(".button-collapse").sideNav({closeOnClick:true});
 }
 
 $(document).ready(main());

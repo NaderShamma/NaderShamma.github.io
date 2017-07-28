@@ -12,8 +12,9 @@ function renderPage(page){
 
 // set up menu
 function menuOverride(pages){
+    var j = 0;
     $.each($('.menu li > a'), function(i, val){
-        var j = 0;
+
         console.log(j);
 
         if(j == pages.length){ j = 0;}

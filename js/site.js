@@ -5,7 +5,9 @@ function renderPage(page){
 
   //render page content
   $.get(page.url, function(data){
-    console.log(typeof data);
+    var start = data.indexOf("<!--start-->");
+    var end = data.indexOf("<!--end-->");
+    console.log(data.slice(start, end));
 
       $('#main-content').html(data);
       $('.collapsible').collapsible();

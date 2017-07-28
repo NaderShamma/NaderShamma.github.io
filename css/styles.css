@@ -23,3 +23,6 @@ h4{
 p{
   font-size: 1em;
 }
+html.no-js>head+body div.collapsible-body {
+  display:block;
+}

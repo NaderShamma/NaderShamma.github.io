@@ -12,23 +12,16 @@ function renderPage(page){
 
 // set up menu
 function menuOverride(pages){
-    var i = 0;
-    var j = 0;
-    console.log($('.menu li > a'));
-    console.log(pages);
-    console.log(pages.length);
     $.each($('.menu li > a'), function(i, val){
+        var j = 0;
         console.log(j);
 
-        if(i == pages.length){ i = 0;}
-        console.log(i);
-        console.log(pages[i].page);
-        $(this).attr("href", pages[i].page);
-        i++;
+        if(j == pages.length){ j = 0;}
+        console.log(j);
+        console.log(pages[j].page);
+        $(this).attr("href", pages[j].page);
         j++;
     });
-
-    i = 0;
 }
 
 //load first page on entry

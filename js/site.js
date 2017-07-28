@@ -20,7 +20,7 @@ function menuOverride(pages){
         console.log(j);
         console.log(i);
 
-        if(i == pages.length) i = 0;
+        if(i == pages.length){ i = 0;}
         console.log(pages[i].page);
         $(this).attr("href", pages[i].page);
         i++;

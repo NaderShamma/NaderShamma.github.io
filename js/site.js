@@ -5,7 +5,7 @@ function renderPage(page){
 
   //render page content
   $.get(page.url, function(data){
-    console.log(data);
+    console.log(typeof data);
 
       $('#main-content').html(data);
       $('.collapsible').collapsible();

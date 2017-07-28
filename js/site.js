@@ -7,9 +7,7 @@ function renderPage(page){
   $.get(page.url, function(data){
     var start = data.indexOf("<!--content-->");
     var end = data.lastIndexOf("<!--content-->");
-    console.log(data.slice(start, end));
-
-      $('#main-content').html(data);
+      $('#main-content').html(data.slice(start, end));
       $('.collapsible').collapsible();
   })
 }

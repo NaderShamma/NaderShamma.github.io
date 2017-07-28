@@ -5,8 +5,8 @@ function renderPage(page){
 
   //render page content
   $.get(page.url, function(data){
-    var start = data.indexOf("<!--start-->");
-    var end = data.indexOf("<!--end-->");
+    var start = data.indexOf("<!--content-->");
+    var end = data.lastIndexOf("<!--content-->");
     console.log(data.slice(start, end));
 
       $('#main-content').html(data);

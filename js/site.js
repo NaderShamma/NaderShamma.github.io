@@ -49,6 +49,7 @@ function navigation(pages){
 }
 
 function materialize(data){
+  $('html').removeClass('no-js');
   menuOverride(data.content);
   init(data.content);
   navigation(data.content);

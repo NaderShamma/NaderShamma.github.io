@@ -13,12 +13,17 @@ function renderPage(page){
 // set up menu
 function menuOverride(pages){
     var i = 0;
+    var j = 0;
     console.log($('.menu li > a'));
     console.log(pages);
     $.each($('.menu li > a'), function(i, val){
+        console.log(j);
+        console.log(i);
+        console.log(pages[i].pages);
         if(i === pages.length) i = 0;
         $(this).attr("href", pages[i].page);
-        i++
+        i++;
+        j++;
     });
 
     i = 0;

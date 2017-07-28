@@ -5,6 +5,8 @@ function renderPage(page){
 
   //render page content
   $.get(page.url, function(data){
+    console.log(data);
+
       $('#main-content').html(data);
       $('.collapsible').collapsible();
   })
@@ -14,8 +16,6 @@ function renderPage(page){
 function menuOverride(pages){
     var j = 0;
     $.each($('.menu li > a'), function(i, val){
-        console.log(i);
-        console.log(val);
         if(j == pages.length){ j = 0;}
         $(this).attr("href", "#"+pages[j].page);
         j++;

@@ -16,14 +16,9 @@ function menuOverride(pages){
     console.log($('.menu li > a'));
     console.log(pages);
     $.each($('.menu li > a'), function(i, val){
-        console.log(pages);
+        if(i === pages.length) i = 0;
         $(this).attr("href", pages[i].page);
-        if(i < pages.length){
-          i ++;
-        }
-        else {
-          i = 0;
-        }
+        i++
     });
 
     i = 0;
